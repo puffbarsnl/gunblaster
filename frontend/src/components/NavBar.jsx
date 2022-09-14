@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import styled from "styled-components";
 import { logoutUser } from "../slices/authSlice";
 import React, { useState } from "react";
+import toast from "react-hot-toast";
 
 const NavBar = () => {
   const dispatch = useDispatch();
@@ -41,6 +42,9 @@ const NavBar = () => {
 		<div className={`mobile-links ${show ? "show" : null}`}>
 			{auth._id ? (
 				<MobileLinks>
+					<Link to="/faq">
+						FAQ
+					</Link>
 					<Link to="/klantenservice">
 						Klantenservice
 					</Link>
@@ -99,6 +103,9 @@ const NavBar = () => {
 
       {auth._id ? (
         <Links>
+					<Link to="/faq">
+						FAQ
+					</Link>
 					<Link to="/klantenservice">
 							Klantenservice
 						</Link>
@@ -125,6 +132,9 @@ const NavBar = () => {
         </Links>
       ) : (
         <AuthLinks>
+					<Link to="/faq">
+						FAQ
+					</Link>
 					<Link to="/klantenservice">
 						Klantenservice
 					</Link>

@@ -20,11 +20,12 @@ const CheckoutSuccess = () => {
     <Container>
       <h2>Uw bestelling is voltooid.</h2>
       <p>Het kan even duren voordat uw bestelling is verwerkt.</p>
-      <p>U kunt uw bestelstatus controleren door te navigeren naar <strong><Link to="/orders">Bestellingen</Link>.</strong></p>
+			<p style={{background: "#333", color: "#fff", padding: 8, borderRadius: 4}}>MEDEDELING: Vanwege populariteit zijn onze producten over 10-15 dagen op voorraad.</p>
       <p>
 				Neem bij vragen contact op met de onze:{" "}
         <strong><Link to="/klantenservice">Klantenservice</Link></strong>
       </p>
+      <p>U kunt uw bestelstatus controleren door te navigeren naar <strong><Link to="/orders">Bestellingen</Link>.</strong></p>
     </Container>
   );
 };

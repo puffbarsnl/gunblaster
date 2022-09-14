@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import toast from "react-hot-toast";
 import { url, setHeaders } from "./api";
 
 const initialState = {
@@ -33,9 +34,11 @@ export const productsCreate = createAsyncThunk(
         setHeaders()
       );
 
+			toast.success("Opgeslagen")
       return response.data;
     } catch (error) {
       console.log(error);
+			toast.error(error);
     }
   }
 );
@@ -50,9 +53,11 @@ export const productsEdit = createAsyncThunk(
         setHeaders()
       );
 
+			toast.success("Opgeslagen")
       return response.data;
     } catch (error) {
       console.log(error);
+			toast.error(error);
     }
   }
 );
@@ -66,9 +71,11 @@ export const productDelete = createAsyncThunk(
         setHeaders()
       );
 
+			toast.success("Verwijderd")
       return response.data;
     } catch (error) {
       console.log(error.response.data);
+			toast.error(error.response.data);
     }
   }
 );

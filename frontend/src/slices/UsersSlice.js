@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import toast from "react-hot-toast";
 import { url, setHeaders } from "./api";
 
 const initialState = {
@@ -22,6 +23,7 @@ export const userDelete = createAsyncThunk("users/userDelete", async (id) => {
   try {
     const response = await axios.delete(`${url}/users/${id}`, setHeaders());
 
+		toast.success("Verwijderd")
     return response.data;
   } catch (error) {
     console.log(error.response.data);

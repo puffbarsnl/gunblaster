@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import toast from "react-hot-toast";
 import { url, setHeaders } from "./api";
 
 const initialState = {
@@ -38,9 +39,11 @@ export const ordersEdit = createAsyncThunk(
         setHeaders()
       );
 
+			toast.success("Gewijzigd")
       return response.data;
     } catch (error) {
       console.log(error);
+			toast.error(error);
     }
   }
 );

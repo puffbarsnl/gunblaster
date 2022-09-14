@@ -14,16 +14,15 @@ const Footer = () => {
 					</div>
 					<div>
 						<h2>Info</h2>
-						<Link to="#">FAQ</Link>
-						<Link to="#">Verzendbeleid</Link>
-						<Link to="#">Retourbeleid</Link>
-						<Link to="#">Privacybeleid</Link>
-						<Link to="#">Algemene voorwaarden</Link>
+						<Link to="/faq">FAQ</Link>
+						<Link to="/verzend-beleid">Verzendbeleid</Link>
+						<Link to="/retour-beleid">Retourbeleid</Link>
+						<Link to="/privacy-beleid">Privacybeleid</Link>
+						<Link to="/algemene-voorwaarden">Algemene voorwaarden</Link>
 					</div>
 					<div>
 						<h2>Contact</h2>
 						<p>gunblasternl@gmail.com</p>
-						<p>+31 6 233 566 76</p>
 					</div>
 				</div>
 				<p className="footer-cr">GUNBLASTER.NL 2022 © Alle rechten voorbehouden</p>
